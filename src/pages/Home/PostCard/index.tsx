@@ -1,5 +1,6 @@
 import { formatDistanceToNow } from "date-fns";
-import { ptBR } from "date-fns/locale"
+import { ptBR } from "date-fns/locale";
+
 import { Post } from "../../../models/Post.interface";
 
 import { PostCardContainer } from "./styles";
@@ -10,7 +11,7 @@ interface PostcardProps {
 
 export function PostCard({ post }: PostcardProps) {
   return (
-    <PostCardContainer to={`/post-detail/1`}>
+    <PostCardContainer to={`/post-detail/${post.number}`}>
       <header>
         <h1>{post.title}</h1>
         <span>
